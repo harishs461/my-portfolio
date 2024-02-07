@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply bg-white tracking-wide
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  .active-link {
+    background: rgba(0, 0, 0, 0.767);
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    padding: 6px 14px;    
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  input {
+    background-color: #d1eef28c; /* Replace with your desired color code */
+    padding: 8px; /* Optional: Add padding for better appearance */
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+    border-radius: 8px;
+  }
+
+  .card {
+    background-color: white;
+    padding: 32px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+  }
+
+  .text-area {
+    background-color: #d1eef28c;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
   }
 }
